@@ -14,15 +14,13 @@ This image suite provides 2 streams for images:
 ### Latest
 
 ```
-skpr/clamav:latest-v2-latest-amd64
-skpr/clamav:latest-v2-latest-arm64
+skpr/clamav:v3-latest
 ```
 
 ### Edge
 
 ```
-skpr/clamav:latest-v2-edge-amd64
-skpr/clamav:latest-v2-edge-arm64
+skpr/clamav:v3-edge
 ```
 
 ## Building

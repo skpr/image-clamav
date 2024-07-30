@@ -17,6 +17,18 @@ platforms: &platforms
   - arm64
 
 workflows:
+  build_test:
+    jobs:
+      - build:
+          stream: test
+          push: false
+          context: docker-publishing
+          matrix:
+            parameters:
+              executor: *platforms
+          filters:
+            branches:
+              ignore: [ main, releases ]
 
   build_edge:
     jobs:

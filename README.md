@@ -6,25 +6,38 @@ Images for building and running cluster-scoped ClamAV images.
 
 This image suite provides 2 streams for images:
 
-- `latest` - A stable upstream.
-- `edge` - Recently merged changes which will be merged into latest as part of a release.
+* `stable` - Our production/stable upstream for projects. Use this by default.
+* `latest` - Recently merged changes which will be merged into `stable` as part of a release.
 
 ## Images
 
-### Latest
+Images are available in the following registries:
+
+* `ghcr.io`
+* `docker.io`
+
+## Image List
+
+Below is the list of images we provide.
+
+By default we recommend the following registry and stream:
 
 ```
-skpr/clamav:v3-latest
+REGISTRY=docker.io
+STREAM=stable
 ```
 
-### Edge
+**Stable**
 
 ```
-skpr/clamav:v3-edge
+REGISTRY/skpr/clamav:v2-STREAM
+REGISTRY/skpr/clamav:dev-v2-STREAM
 ```
 
-## Building
+## Building Images
 
-```
-VERSION_TAG=dev make build
+Build the images locally using the following command:
+
+```bash
+$ make
 ```

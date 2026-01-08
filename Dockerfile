@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM from_image
 
 RUN apk add util-linux ca-certificates
 
